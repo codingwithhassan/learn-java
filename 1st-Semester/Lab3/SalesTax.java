@@ -1,7 +1,7 @@
 public class SalesTax{
     public static void main(String[] args){
         double netIncome = 100, // purchase amount
-            stateSalesTaxPercent = 0.4, countrySalesTaxPercent = 0.2;
+            stateSalesTaxPercent = 0.04, countrySalesTaxPercent = 0.02;
         double grossIncome, // before tax
             stateTax, countryTax, totalTax, totalSales;
 
