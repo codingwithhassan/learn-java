@@ -1,1 +1,7 @@
+# byte code || machine code
 *.class
+
+# images
+*.png
+*.jpg
+*.jpeg
