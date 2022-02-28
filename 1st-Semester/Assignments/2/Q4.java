@@ -57,5 +57,10 @@ public class Q4 {
         
         System.out.println("Explicit Casting:");
         System.out.print((int)ch1 + " code of " + ch1 +"\n" + (int)ch2 + " code of " + ch2);
+
+        char previous = (char)((int)ch1 - 1);
+        char next = (char)((int)ch1 + 1);
+
+        System.out.print("\nPrevious Character of first character: "+previous+"\nNext Character of second character: "+next);
     }
 }
