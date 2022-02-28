@@ -45,21 +45,21 @@ public class Q5 {
                         System.out.print("Enter Second Number: ");
                         num2 = in.nextDouble();
     
-                        System.out.println("Sum is :" + (num1 - num2));
+                        System.out.println("Subtraction is :" + (num1 - num2));
                     }else if (choice == '*') {
                         System.out.print("Enter First Number: ");
                         num1 = in.nextDouble();
                         System.out.print("Enter Second Number: ");
                         num2 = in.nextDouble();
     
-                        System.out.println("Sum is :" + (num1 * num2));
+                        System.out.println("Multiplication is :" + (num1 * num2));
                     }else if (choice == '/') {
                         System.out.print("Enter First Number: ");
                         num1 = in.nextDouble();
                         System.out.print("Enter Second Number: ");
                         num2 = in.nextDouble();
     
-                        System.out.println("Sum is :" + (num1 / num2));
+                        System.out.println("Division is :" + (num1 / num2));
                     }else if (choice == 'S' || choice == 's') {
                         System.out.println("Press L for Log Function");
                         System.out.println("Press S for Sin Function");
@@ -96,7 +96,7 @@ public class Q5 {
                             System.out.print("Enter Power: ");
                             num2 = in.nextDouble();
     
-                            System.out.println("Cos of number is " + Math.pow(num1, num2));
+                            System.out.println(num2 + "'s power of "+num1+" is " + Math.pow(num1, num2));
                         }else if (choice == 'm' || choice == 'M')
                             continue;
                         else{
@@ -123,8 +123,7 @@ public class Q5 {
                                 num2 = in.nextDouble();
 
                                 System.out.println("Area of Rectangle: " + (num1 * num2));
-                            }
-                            if (choice == 'p' || choice == 'P') {
+                            }else if (choice == 'p' || choice == 'P') {
                                 System.out.print("Enter Length: ");
                                 num1 = in.nextDouble();
                                 System.out.print("Enter Width: ");
@@ -134,7 +133,7 @@ public class Q5 {
                             }
                         }else if (choice == '2') {
                             System.out.println("Press A for Area");
-                            System.out.println("Press P for Parameter");
+                            System.out.println("Press P for Perimeter");
                             choice = in.next().charAt(0);
     
                             if (choice == 'a' || choice == 'A') {
@@ -142,8 +141,7 @@ public class Q5 {
                                 num = in.nextDouble();
 
                                 System.out.println("Area of Square: " + (Math.pow(num,2)));
-                            }
-                            if (choice == 'p' || choice == 'P') {
+                            }else if (choice == 'p' || choice == 'P') {
                                 System.out.print("Enter Length of side: ");
                                 num = in.nextDouble();
 
@@ -151,7 +149,7 @@ public class Q5 {
                             }
                         }else if (choice == '3') {
                             System.out.println("Press A for Area");
-                            System.out.println("Press P for Parameter");
+                            System.out.println("Press P for Perimeter");
                             choice = in.next().charAt(0);
 
                             if (choice == 'a' || choice == 'A') {
@@ -161,8 +159,7 @@ public class Q5 {
                                 num2 = in.nextDouble();
 
                                 System.out.println("Area of Triangle: " + ( (num1 * num2) / 2.0) );
-                            }
-                            if (choice == 'p' || choice == 'P') {
+                            }else if (choice == 'p' || choice == 'P') {
                                 System.out.print("Enter first side  : ");
                                 num = in.nextDouble();
                                 System.out.print("Enter second side : ");
