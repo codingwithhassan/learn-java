@@ -35,7 +35,11 @@ public class Calculator{
             double n1 = in.nextDouble();
             System.out.print("Enter second Number: ");
             double n2 = in.nextDouble();
-            System.out.println("Modulus of "+n1+" and "+n2+" is "+ (n1%n2));
+            if(n2 == 0){
+                System.out.println("Division By Zero not allowed!");
+            }else{
+                System.out.println("Modulus of "+n1+" and "+n2+" is "+ (n1%n2));
+            }
         }else if(choice == 's' || choice == 'S'){
             System.out.print("Enter a Number: ");
             double n = in.nextDouble();
