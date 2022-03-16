@@ -10,8 +10,8 @@ public class WhileLoops {
         System.out.print("Enter ending number: ");
         endingNum = in.nextInt();
 
-        long sumEven = 0;
-        String evenOutput = "", oddOutput = "";
+        long sumEven = 0, sumOdd = 0;
+        String evenOutput = "";
 
         if(startingNum < endingNum){
             System.out.println("Number : Square");
@@ -20,7 +20,7 @@ public class WhileLoops {
                     sumEven += i;
                     evenOutput += i + " ";
                 }else{
-                    oddOutput += i * i + " ";
+                    sumOdd += i * i;
                 }
                 System.out.println(i + " : " + i * i);
             }
@@ -30,7 +30,7 @@ public class WhileLoops {
             System.out.println("Sum of Even Numbers: ");
             System.out.println(sumEven);
             System.out.println("Sum of the square of Odd Numbers: ");
-            System.out.println(oddOutput);
+            System.out.println(sumOdd);
 
         }else{
             System.out.println("Starting Number must be less than Ending Number!");
