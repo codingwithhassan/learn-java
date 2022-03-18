@@ -15,7 +15,8 @@ public class WhileLoops {
 
         if(startingNum < endingNum){
             System.out.println("Number : Square");
-            for (int i = startingNum; i <= endingNum; i++) {
+            int i = startingNum;
+            while (i <= endingNum) {
                 if(i % 2 == 0){
                     sumEven += i;
                     evenOutput += i + " ";
@@ -23,6 +24,7 @@ public class WhileLoops {
                     sumOdd += i * i;
                 }
                 System.out.println(i + " : " + i * i);
+                i++;
             }
 
             System.out.println("Even Numbers: ");
