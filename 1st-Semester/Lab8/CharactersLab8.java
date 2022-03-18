@@ -33,9 +33,8 @@ public class CharactersLab8{
 		// d - lowercase letters starting from a and skipping two letters
 		lowercaseLetter = 'a';
 		while(lowercaseLetter <= 'z'){
-			if(lowercaseLetter != 'b' && lowercaseLetter != 'c')
-				System.out.print(lowercaseLetter + " ");
-			lowercaseLetter++;
+			System.out.print(lowercaseLetter + " ");
+			lowercaseLetter += 3;	// skipping two letters
 		}
 
 		System.out.println();
