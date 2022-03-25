@@ -2,6 +2,4 @@
 *.class
 
 # images
-*.png
-*.jpg
-*.jpeg
+/**/output
