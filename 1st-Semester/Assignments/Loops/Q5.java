@@ -5,17 +5,19 @@ public class Q5 {
         String str;
         char ch;
 
-        int ascii,letters, spaces, numbers, specialCh, alphabets;
+        int ascii,letters, spaces, numbers, specialCh,
+            alphabets;  // ordered sequence of letter
         letters = spaces = numbers = specialCh = alphabets = 0;
 
         System.out.print("Enter a string: ");
-        str = in.next();
+        str = in.nextLine();
 
         int i = 0;
         int len = str.length();
         while(i < len){
             ch = str.charAt(i);
             ascii = (int)ch;
+
             if(ascii == 32){
                 spaces++;
             }else if((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)){
@@ -32,5 +34,6 @@ public class Q5 {
         System.out.println("Spaces: " + spaces);
         System.out.println("Numbers: " + numbers);
         System.out.println("Special Characters: " + specialCh);
+        System.out.println("Alphabets: " + alphabets);
     }
 }

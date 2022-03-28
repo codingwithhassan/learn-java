@@ -4,5 +4,8 @@
 # pdf files
 *.pdf
 
+# zip files
+*.zip
+
 # images
 /**/output
