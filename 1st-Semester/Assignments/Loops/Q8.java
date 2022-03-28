@@ -1,41 +1,60 @@
+import java.util.Scanner;
+
 public class Q8 {
 
-    static char flip(char c) {
-        return (c == '0') ? '1' : '0';
-    }
-
-    static void printOneAndTwosComplement(String bin) {
-        int n = bin.length();
-        int i;
-
-        String ones = "", twos = "";
-        ones = twos = "";
-
-        for (i = 0; i < n; i++) {
-            ones += flip(bin.charAt(i));
-        }
-
-        twos = ones;
-        for (i = n - 1; i >= 0; i--) {
-            if (ones.charAt(i) == '1') {
-                twos = twos.substring(0, i) + '0' + twos.substring(i + 1);
-            } else {
-                twos = twos.substring(0, i) + '1' + twos.substring(i + 1);
-                break;
-            }
-        }
-
-        if (i == -1) {
-            twos = '1' + twos;
-        }
-
-        System.out.println("1's complement: " + ones);
-        ;
-        System.out.println("2's complement: " + twos);
-    }
-
     public static void main(String[] args) {
-        String bin = "1110010";
-        printOneAndTwosComplement(bin);
+        Scanner in = new Scanner(System.in);
+
+        int choice, digit;
+        String num, inverse;
+
+        System.out.print(
+                "Press 1 to find one's complement of Binary Number\nPress 2 to find Two's complement of Binary Number\n:");
+        choice = in.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.print("Enter Binary Number: ");
+                num = in.next();
+
+                inverse = "";
+                for (int i = 0; i < num.length(); i++) {
+                    digit = Integer.parseInt(num.charAt(i) + "");
+                    inverse += digit == 1 ? 0 : 1;
+                }
+
+                System.out.println(inverse);
+
+                break;
+            case 2:
+                System.out.print("Enter Binary Number: ");
+                num = in.next();
+
+                inverse = "";
+                int i = 0;
+                for (; i < num.length(); i++) {
+                    digit = Integer.parseInt(num.charAt(i) + "");
+                    inverse += digit == 1 ? 0 : 1;
+                }
+
+                int twoComplement = Integer.parseInt(inverse) + 1;
+
+                String zeros = "";
+                int j = (int) Math.log10(twoComplement) + 1;
+                while (j < i) {
+                    zeros += "0";
+                    j++;
+                }
+
+                System.out.println(twoComplement + zeros);
+
+                break;
+
+            default:
+                System.out.println("Invalid Choice");
+                break;
+        }
+
     }
+
 }
