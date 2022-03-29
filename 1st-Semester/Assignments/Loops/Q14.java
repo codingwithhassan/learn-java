@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
 public class Q14 {
+    public static boolean isPrime(int n) {  
+       if (n <= 1) {  
+           return false;  
+       }  
+       for (int i = 2; i < Math.sqrt(n); i++) {  
+           if (n % i == 0) {  
+               return false;  
+           }  
+       }  
+       return true;  
+   }  
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -21,45 +32,22 @@ public class Q14 {
 
         if (isPrime) {
             System.out.println(num + " is Prime Number");
-            int p = num;
-            int count = 0, iteration;
-            boolean isPrimeNum = true;
-            int sqrtNum;
+            int count = 0;
             while (count < 10) {
-                iteration = 2;
-                sqrtNum = (int) Math.sqrt(p);
-                while (iteration <= sqrtNum) {
-                    if (p % iteration == 0)
-                        isPrimeNum = false;
-                    iteration++;
-                }
-                if (isPrimeNum) {
-                    System.out.print(p + " ");
+                if (isPrime(num)) {
+                    System.out.print(num + " ");
                     count++;
                 }
-
-                p++;
+               num++;
             }
         } else {
             System.out.println(num + " is not Prime Number");
-            int p = num;
-            int count = 0, iteration;
-            boolean isPrimeNum = true;
-            int sqrtNum;
-            while (count < 1) {
-                iteration = 2;
-                sqrtNum = (int) Math.sqrt(p);
-                while (iteration <= sqrtNum) {
-                    if (p % iteration == 0)
-                        isPrimeNum = false;
-                    iteration++;
+            while (true) {
+                if (isPrime(num)) {
+                    System.out.print(num + " ");
+                    break;
                 }
-                if (isPrimeNum) {
-                    System.out.print(p + " ");
-                    count++;
-                }
-
-                p++;
+                num++;
             }
         }
     }
