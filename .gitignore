@@ -6,6 +6,7 @@
 
 # zip files
 *.zip
+*.rar
 
 # images
 /**/output

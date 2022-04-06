@@ -8,11 +8,11 @@ public class Q12 {
 
 		int n1, n2, product, hcf, lcm;
 
-		System.out.print("Enter the 1st number");
+		System.out.print("Enter the 1st number: ");
 
 		n1 = in.nextInt();
 
-		System.out.print("Enter the 2nd number");
+		System.out.print("Enter the 2nd number: ");
 
 		n2 = in.nextInt();
 
