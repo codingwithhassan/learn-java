@@ -22,6 +22,7 @@ public class AverageRainFall{
                 }
                 sum += inches;
             }
+            System.out.println();
         }
 
         double average = sum / (years * 12);
