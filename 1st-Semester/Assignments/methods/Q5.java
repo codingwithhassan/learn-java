@@ -1,13 +1,12 @@
+import java.util.Scanner;
 public class Q5{
-    public static int GreatestCommonDivisor(int n1, int n2){
-        while(n1 != n2){
-            if(n1 > n2){
-                n1 = n1 - n2;
-            }else{
-                n2 = n2 - n1;
-            }
-        }
-        return n1;
+    public static int gcd(int n1, int n2){
+        if(n1 == n2)
+            return n1;
+        if(n1 > n2)
+            return gcd(n1 - n2, n2);
+        else
+            return gcd(n1,n2 - n1);
     }
     
     public static int factorial(int n){
@@ -32,24 +31,21 @@ public class Q5{
     }
 
     public static int sum(int n){
-        int sum = 0;
-        int i = 0;
-        while(i < n){
-            sum += n;
-            i++;
-        }
-        return sum;
+        if(n == 0)
+            return n;
+        return n + sum(n - 1);
     }
 
-    public static boolean isPrime(int n){
-        int i = 2;
-        int sqrt = (int)Math.sqrt(n);
-        while(i <= sqrt){
-            if(n % i == 0)
-                return false;
-            i++;
-        }
-        return true;
+    public static boolean isPrime(int n, int i){
+        if(n < 2)
+            return false;
+        else if(n == 2 || n == 3)
+            return true;
+        else if (n == i)
+            return true;
+        else if(n % i == 0)
+            return false;
+        return isPrime(n, i + 1);
     }
 
     public static boolean isEven(int n){
@@ -57,6 +53,20 @@ public class Q5{
     }
 
     public static void main(String args[]){
-        System.out.println(isPrime(7));
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter first number: ");
+        int num1 = in.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = in.nextInt();
+        System.out.printf("Greatest Common Divisor of %d and %d is %d\n",num1,num2,gcd(num1, num2)); // or hcf
+        
+        System.out.print("Enter a number: ");
+        int num = in.nextInt();
+        System.out.println("Factorial : "+ factorial(num));
+        System.out.println("Sum : "+ sum(num));
+        System.out.println("Fibonacci : "+ fibonacci(num));
+        System.out.println("Is Prime? : "+isPrime(num,2));
+        System.out.println("Is Even? : "+isEven(num));
     }
 }
