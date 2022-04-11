@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Q6{
     public static int add(int n1, int n2){
         return n1 + n2;
@@ -12,10 +13,16 @@ public class Q6{
         return n1 / n2;
     }
     public static void main(String args[]){
-        int n1 = 2;
-        int n2 = 54;
-        char operation = '+';
-        switch(operation){
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        int n1 = in.nextInt();
+        System.out.print("Enter Second Number: ");
+        int n2 = in.nextInt();
+        System.out.print("Enter Operation(+,-,*,/): ");
+        String operation = in.next();
+
+        switch(operation.charAt(0)){
             case '+':
                 System.out.println("Addition : " + (add(n1,n2)));
                 break;
