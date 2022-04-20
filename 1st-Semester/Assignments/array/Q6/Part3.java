@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class Part3 {
     public static int countValue(int[] a, int n) {
-        int i, count, length;
-        boolean isTrue = true;
+        int i, count;
         count = 0;
         for (i = 0; i < a.length; i++) {
             if (n == a[i]) {
