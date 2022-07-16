@@ -1,0 +1,12 @@
+Jan 32 39
+Feb 32 49
+March 26 43
+April 32 39
+May 28 39
+June 38 45
+July 34 39
+Aug 32 39
+Step 28 45
+Oct 34 41
+Nov 35 41
+Dec 36 41
