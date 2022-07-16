@@ -4,7 +4,7 @@ public class AirplaneSeating {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int seats[][] = new int[13][6];
+        boolean seats[][] = new boolean[13][6];
         int choice = 0;
 
         do {
@@ -13,7 +13,7 @@ public class AirplaneSeating {
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    showSeats(seats);
+                    showAllSeats(seats);
                     break;
                 case 2:
                     addSeat(seats);
@@ -29,11 +29,11 @@ public class AirplaneSeating {
         } while (choice != 0);
     }
 
-    public static void addSeat(int seats[][]) {
+    public static void addSeat(boolean seats[][]) {
         Scanner input = new Scanner(System.in);
         int type;
         int[] validRows = new int[2];
-        showSeats(seats);
+        showAllSeats(seats);
 
         String askTicketType = "1) First Class\n2) Business Class\n3) Economy Class\nEnter Ticket Type (1,2,3): ";
         System.out.print(askTicketType);
@@ -71,10 +71,10 @@ public class AirplaneSeating {
             col = input.next().toLowerCase().charAt(0);
         }
 
-        seats[row][col - 97] = 1;
+        seats[row][col - 97] = true;
     }
 
-    public static void showSeats(int seats[][]) {
+    public static void showAllSeats(boolean seats[][]) {
 
         System.out.println("         A B C D E F");
         for (int i = 0; i < seats.length; i++) {
@@ -82,7 +82,7 @@ public class AirplaneSeating {
             System.out.printf("Row %2d   ", i + 1);
 
             for (int j = 0; j < seats[i].length; j++) {
-                System.out.print(seats[i][j] + " ");
+                System.out.print( (seats[i][j] ? "X" : "*") + " ");
             }
             System.out.println();
 

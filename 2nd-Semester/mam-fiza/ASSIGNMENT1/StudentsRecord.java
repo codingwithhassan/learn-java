@@ -58,14 +58,6 @@ public class StudentsRecord {
         System.out.println("Class Average: " + avg);
     }
 
-    public static String[] removeFirstElement(String[] arr) {
-        String newArr[] = new String[arr.length - 1];
-        for (int i = 1; i < arr.length; i++) {
-            newArr[i-1] = arr[i];
-        }
-        return newArr;
-    }
-
     private static String getGrade(double marks){
         if(marks >= 85 && marks <= 100){
             return "A+";
@@ -97,5 +89,13 @@ public class StudentsRecord {
         }
 
         showClassAverage(scores);
+    }
+
+    public static String[] removeFirstElement(String[] arr) {
+        String newArr[] = new String[arr.length - 1];
+        for (int i = 1; i < arr.length; i++) {
+            newArr[i-1] = arr[i];
+        }
+        return newArr;
     }
 }
