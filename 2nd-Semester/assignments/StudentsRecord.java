@@ -1,10 +1,27 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StudentsRecord {
 
+    // TODO: how to make Generic Method
+    // public static <T> T input() { ... }
+    
+    public static int input() {
+        Scanner input = new Scanner(System.in);
+        do{
+            try {
+                return input.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.print("Incorrect Input Type!\nEnter again: ");
+                input.next();
+            } finally {
+                System.out.flush();
+            }
+        }while(true);
+    }
+
     public static int askChoice() {
         int choice;
-        Scanner input = new Scanner(System.in);
 
         String str = "\nPress 0 to Exit\n" +
                 "Press 1 to Add a New Student\n" +
@@ -16,14 +33,14 @@ public class StudentsRecord {
                 "Press 7 to Sort by Name\n" +
                 "Press 8 to Sort By Id\n" +
                 "Press 9 to Display All Students\n" +
-                "\nEnter Your Choice (0 - 6) : ";
+                "\nEnter Your Choice (0 - 9) : ";
 
         System.out.print(str);
-        choice = input.nextInt();
+        choice = input();
 
-        while (choice < 0 || choice > 6) {
+        while (choice < 0 || choice > 9) {
             System.out.print("Invalid!\n" + str);
-            choice = input.nextInt();
+            choice = input();
         }
 
         return choice;
