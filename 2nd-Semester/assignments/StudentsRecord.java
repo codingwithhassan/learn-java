@@ -104,20 +104,54 @@ public class StudentsRecord{
     }
 
     static int searchByName(String[][] students, int currentSize, String key){
-        for (int i = 0; i < currentSize; i++) {
-            if(students[i][0].equals(key)){
-                return i;
+        
+        // for binary search, array must be sorted
+        sortByName(students, currentSize);
+
+        int left = 0;
+        int right = currentSize - 1;
+        int middle;
+
+        while (left <= right) {
+
+            middle = ( left + right ) / 2;
+
+            if(students[middle][0].compareTo(key) == 0){
+                return middle;
+            }else if(students[middle][0].compareTo(key) < 0){
+                left = middle + 1;
+            }else if(students[middle][0].compareTo(key) > 0){
+                right = middle - 1;
             }
+
         }
+
         return -1;
     }
 
     static int searchById(String[][] students, int currentSize, String key){
-        for (int i = 0; i < currentSize; i++) {
-            if(students[i][1].equals(key)){
-                return i;
+
+        // for binary search, array must be sorted
+        sortById(students, currentSize);
+
+        int left = 0;
+        int right = currentSize - 1;
+        int middle;
+
+        while (left <= right) {
+
+            middle = ( left + right ) / 2;
+
+            if(Long.parseLong(students[middle][1]) == Long.parseLong(key)){
+                return middle;
+            }else if(Long.parseLong(students[middle][1]) < Long.parseLong(key)){
+                left = middle + 1;
+            }else if(Long.parseLong(students[middle][1]) > Long.parseLong(key)){
+                right = middle - 1;
             }
+
         }
+
         return -1;
     }
 
