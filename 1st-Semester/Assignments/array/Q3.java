@@ -36,7 +36,7 @@ public class Q3 {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
 
-        double temperature[] = { 17.8, 20.7, 26.5, 35.2, 40, 43.4, 46.2, 46.3, 44.0, 33, 26.1, 17.3 };
+        double temperature[] = { 17.8, 20.7, 26.5, 35.2, 40, 43.4, 46.2, 46.3, 44.0, 33, 26.1, 17.3 };  // using initializer list for primitive types
 
         System.out.println("Average temperature of year: " + averageTemperature(temperature));
         System.out.println("Maximum temperature month: " + (maximumTemperature(temperature) + 1));
