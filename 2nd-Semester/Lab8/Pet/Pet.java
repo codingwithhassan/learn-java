@@ -74,8 +74,4 @@ public class Pet {
     public static Pet create(Pet p){
         return new Pet(p);
     }
-
-    public void setIt(int var){
-        var = 342;
-    }
 }
