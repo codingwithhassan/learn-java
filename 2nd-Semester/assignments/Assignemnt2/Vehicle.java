@@ -5,38 +5,6 @@ public class Vehicle {
     private int seatingCapacity;
     private double speed;
 
-    public String getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
-    public int getNumberOfWheels() {
-        return numberOfWheels;
-    }
-
-    public void setNumberOfWheels(int numberOfWheels) {
-        this.numberOfWheels = numberOfWheels;
-    }
-
-    public int getSeatingCapacity() {
-        return seatingCapacity;
-    }
-
-    public void setSeatingCapacity(int seatingCapacity) {
-        this.seatingCapacity = seatingCapacity;
-    }
-
-    public double getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
-
     public Vehicle() {
         this.vehicleType = null;
         this.numberOfWheels = 0;
@@ -56,6 +24,42 @@ public class Vehicle {
         this.numberOfWheels = numberOfWheels;
         this.seatingCapacity = seatingCapacity;
         this.speed = speed;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public int getSeatingCapacity() {
+        return seatingCapacity;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public Vehicle setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+        return this;
+    }
+
+    public Vehicle setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
+        return this;
+    }
+
+    public Vehicle setSeatingCapacity(int seatingCapacity) {
+        this.seatingCapacity = seatingCapacity;
+        return this;
+    }
+
+    public Vehicle setSpeed(double speed) {
+        this.speed = speed;
+        return this;
     }
 
     public void deepCopy(Vehicle vehicle) {

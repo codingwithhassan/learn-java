@@ -4,33 +4,15 @@ public class Car {
     private String licenseNumber;
     private int yearOfPurchase;
 
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getLicenseNumber() {
-        return licenseNumber;
-    }
-
-    public void setLicenseNumber(String licenseNumber) {
-        this.licenseNumber = licenseNumber;
-    }
-
-    public int getYearOfPurchase() {
-        return yearOfPurchase;
-    }
-
-    public void setYearOfPurchase(int yearOfPurchase) {
-        this.yearOfPurchase = yearOfPurchase;
-    }
-
     public Car() {
         this.modelName = null;
         this.licenseNumber = null;
+        this.yearOfPurchase = 0;
+    }
+
+    public Car(String modelName, String licenseNumber) {
+        this.modelName = modelName;
+        this.licenseNumber = licenseNumber;
         this.yearOfPurchase = 0;
     }
 
@@ -40,10 +22,31 @@ public class Car {
         this.yearOfPurchase = yearOfPurchase;
     }
 
-    public Car(String modelName, String licenseNumber) {
+    public String getModelName() {
+        return modelName;
+    }
+
+    public String getLicenseNumber() {
+        return licenseNumber;
+    }
+
+    public int getYearOfPurchase() {
+        return yearOfPurchase;
+    }
+
+    public Car setModelName(String modelName) {
         this.modelName = modelName;
+        return this;
+    }
+
+    public Car setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
-        this.yearOfPurchase = 0;
+        return this;
+    }
+
+    public Car setYearOfPurchase(int yearOfPurchase) {
+        this.yearOfPurchase = yearOfPurchase;
+        return this;
     }
 
     public void copy(Car car) {
@@ -54,6 +57,11 @@ public class Car {
 
     @Override
     public String toString() {
-        return String.format("");
+        return String.format(
+            "\nModel Name: %s\nLicense Number: %s\nYear of Purchase: %d\n",
+            this.getModelName(),
+            this.getLicenseNumber(),
+            this.getYearOfPurchase()
+        );
     }
 }
