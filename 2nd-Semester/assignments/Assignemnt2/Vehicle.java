@@ -69,6 +69,10 @@ public class Vehicle {
         vehicle.setSpeed(this.getSpeed());
     }
 
+    /**
+     * TODO: Not working well
+     * @param vehicle
+     */
     public void shallowCopy(Vehicle vehicle) {
         vehicle = this;
     }
