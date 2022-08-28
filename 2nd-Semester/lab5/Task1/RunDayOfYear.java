@@ -1,3 +1,7 @@
+/*
+ * javac -d . ./RunDayOfYear.java
+ */
+
 public class RunDayOfYear {
     public static void main(String[] args) {
 

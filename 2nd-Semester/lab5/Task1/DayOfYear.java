@@ -1,5 +1,8 @@
-import java.util.Scanner;
+/*
+ * javac -d . ./DayOfYear.java
+ */
 
+import java.util.Scanner;
 public class DayOfYear {
     private int day;
     private int month;
