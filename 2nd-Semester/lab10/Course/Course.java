@@ -105,7 +105,7 @@ public class Course {
 
         while(right <= courses.length){
             
-            mid = ( ( right - left ) + left) / 2;
+            mid = ( right + left ) / 2;
             
             if(courses[mid].getName().toLowerCase().equals(term.toLowerCase())){
                 search = mid;
