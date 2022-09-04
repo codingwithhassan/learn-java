@@ -37,6 +37,6 @@ public class CheckingAccount extends BankAccount {
     @Override
     public void accountStatement() {
         super.accountStatement();
-        System.out.println("Insufficient Funds Fee : " + this.getInsufficientFundsFee());
+        System.out.println("Insufficient Funds Fee : " + this.getInsufficientFundsFee() + "\n\n");
     }
 }
