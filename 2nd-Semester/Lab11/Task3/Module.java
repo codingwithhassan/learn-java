@@ -24,6 +24,7 @@ public class Module extends Project{
         this.moduleName = moduleName;
     }
 
+    @Override
     public void displayState() {
         super.displayState();
         System.out.println("Module Name: " + this.getModuleName());

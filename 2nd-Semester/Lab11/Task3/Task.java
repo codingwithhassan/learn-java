@@ -36,5 +36,9 @@ public class Task extends Module{
         this.taskDescription = taskDescription;
     }
 
-    
+    @Override
+    public void displayState(){
+        super.displayState();
+        System.out.printf("Task Name: %s\nTask Description: %s\n",getTaskName(),getTaskDescription());
+    }
 }

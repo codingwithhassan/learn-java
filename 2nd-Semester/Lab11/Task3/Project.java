@@ -41,7 +41,7 @@ public class Project {
     
     public void displayState(){
         System.out.printf(
-            "Project ID: %d\nProject Name: %s\nProject Location: %s\n",
+            "\nProject ID: %d\nProject Name: %s\nProject Location: %s\n",
             this.getProjectID(),
             this.getProjectName(),
             this.getProjectLocation()
