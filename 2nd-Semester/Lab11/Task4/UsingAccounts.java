@@ -8,8 +8,10 @@ public class UsingAccounts {
         savingAccount1.accountStatement();
         savingAccount2.accountStatement();
 
+        savingAccount0.depositMonthlyInterest(20);
         savingAccount0.deposit(50);
         savingAccount0.withdraw(30);
+        savingAccount0.withdraw(50);
         
         savingAccount0.accountStatement();
         savingAccount1.accountStatement();

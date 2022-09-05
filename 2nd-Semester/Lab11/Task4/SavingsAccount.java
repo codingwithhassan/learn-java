@@ -30,6 +30,6 @@ public class SavingsAccount extends BankAccount{
     @Override
     public void accountStatement() {
         super.accountStatement();
-        System.out.println("Monthly Interest Rate : " + this.getAnnualInterestRate());
+        System.out.println("Monthly Interest Rate : " + this.getAnnualInterestRate() + "\n\n");
     }
 }
