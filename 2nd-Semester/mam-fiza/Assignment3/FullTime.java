@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class FullTime extends Employee{
@@ -7,14 +8,23 @@ public class FullTime extends Employee{
 
     public FullTime() {
         this.years = 0;
+        this.loans = new ArrayList<Loan>();
     }
 
     public FullTime(int years) {
         this.years = years;
+        this.loans = new ArrayList<Loan>();
     }
 
     public FullTime(int id, String name, int years) {
         super(id, name);
+        this.loans = new ArrayList<Loan>();
+        this.years = years;
+    }
+
+    public FullTime(int id, String name, int years, List<Loan> loans) {
+        super(id, name);
+        this.loans = loans;
         this.years = years;
     }
 

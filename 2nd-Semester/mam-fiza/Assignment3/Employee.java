@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Employee {
@@ -9,11 +10,22 @@ public abstract class Employee {
     public Employee() {
         this.id = 0;
         this.name = "No Name";
+        this.tasks = new ArrayList<Task>();
+        this.salary = null;
     }
 
     public Employee(int id, String name) {
         this.id = id;
         this.name = name;
+        this.tasks = new ArrayList<Task>();
+        this.salary = null;
+    }
+
+    public Employee(int id, String name, Salary salary) {
+        this.id = id;
+        this.name = name;
+        this.tasks = new ArrayList<Task>();
+        this.salary = salary;
     }
 
     public int getId() {

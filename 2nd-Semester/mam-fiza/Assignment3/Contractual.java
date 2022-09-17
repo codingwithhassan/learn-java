@@ -38,7 +38,7 @@ public class Contractual extends Employee{
         this.endDate = endDate;
     }
 
-    public void setLoan(Loan loan){
+    public void addLoan(Loan loan){
         this.loan = loan;
     }
 
