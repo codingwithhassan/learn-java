@@ -1,0 +1,20 @@
+package task4;
+
+public class Employee {
+	private int hoursPerWeek;
+	private int salaryPerHour;
+	private int yearsOfService;
+	public Employee() {
+		this.hoursPerWeek = 0;
+		this.salaryPerHour = 0;
+		this.yearsOfService = 0;
+	}
+	
+	public Employee(int hoursPerWeek, int salaryPerHour, int yearsOfService) {
+		this.hoursPerWeek = hoursPerWeek;
+		this.salaryPerHour = salaryPerHour;
+		this.yearsOfService = yearsOfService;
+	}
+	
+	
+}

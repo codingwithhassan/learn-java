@@ -1,0 +1,14 @@
+package task2;
+
+public class BoundedTypeLab1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public <T extends Number> void largestValue(T number1, T number2, T number3) {
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+
+		Integer intValue = new Integer("23");
+		int intValue2 = 23;
+
+		System.out.println(intValue);
+		System.out.println(intValue2);
+	}
+
+}

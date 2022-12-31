@@ -1,0 +1,9 @@
+package task3;
+
+public class BoundedType {
+	public <T extends Number> void largestValue(T number1,
+			T number2, T number3) {
+		Math.max(Math.max(number1, number2), number3);
+	}
+
+}

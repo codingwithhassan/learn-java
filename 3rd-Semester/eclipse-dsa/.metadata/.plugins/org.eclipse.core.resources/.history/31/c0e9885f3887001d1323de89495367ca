@@ -1,0 +1,30 @@
+package task1;
+
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+
+		Integer intValue = new Integer("23");
+		int intValue2 = 23;
+
+		System.out.println(intValue);
+		System.out.println(intValue2);
+		
+		Double[] values = {34.34, 543.4, 9.7};
+		String[] values2 = {"String", "String2"};
+		
+		printArray(values);
+		printArray(values2);
+		
+		int values23 = new int[5];
+
+	}
+	
+	public static <T> void printArray(T[] array) {
+		for(int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+	}
+
+}

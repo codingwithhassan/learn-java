@@ -1,0 +1,11 @@
+package task3;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BoundedType type = new BoundedType();
+		
+		type.largestValue(n1, n2, n3);
+	}
+
+}
