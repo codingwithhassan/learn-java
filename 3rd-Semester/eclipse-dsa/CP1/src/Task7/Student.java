@@ -1,26 +1,23 @@
 package Task7;
 
-public class Student<T> implements Person {
-	public int id;
+public class Student<T> implements Person<T> {
+	public T id;
 	public String name;
 	public double cgpa;
 	
-	public Student() {
-		super();
-	}
+	public Student() {}
 
-	public Student(int id, String name, double cgpa) {
-		super();
+	public Student(T id, String name, double cgpa) {
 		this.id = id;
 		this.name = name;
 		this.cgpa = cgpa;
 	}
 
-	public int getId() {
+	public T getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(T id) {
 		this.id = id;
 	}
 
@@ -47,13 +44,11 @@ public class Student<T> implements Person {
 
 	@Override
 	public T work() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public T sleep() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
