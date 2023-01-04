@@ -1,5 +1,0 @@
-package task4;
-
-public interface Relateable {
-	public abstract boolean relateable(Employee e);
-}
