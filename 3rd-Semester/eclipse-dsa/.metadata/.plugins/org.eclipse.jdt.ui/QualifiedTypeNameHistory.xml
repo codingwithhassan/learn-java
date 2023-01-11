@@ -6,5 +6,10 @@
     <fullyQualifiedTypeName name="task4.Displayable"/>
     <fullyQualifiedTypeName name="java.lang.Readable"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Book"/>
+    <fullyQualifiedTypeName name="SortByName"/>
+    <fullyQualifiedTypeName name="SortByNoOfPages"/>
+    <fullyQualifiedTypeName name="SortByPrice"/>
 </qualifiedTypeNameHistroy>
