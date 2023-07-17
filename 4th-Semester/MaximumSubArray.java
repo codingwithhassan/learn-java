@@ -1,11 +1,14 @@
+// divide and conquer approach
 public class MaximumSubArray {
 
     public static void main(String[] args) {
-        int[] nums = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
+        // int[] nums = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
+        int[] nums = {-5, 4, 6, -3, 4, -1};
         System.out.print("Array: ");
         display(nums);
         System.out.println();
 
+        // return (start, low, high)
         int[] result = findMaxSubArray(nums, 0, nums.length - 1);
         System.out.println("The starting index of the maximum subarray is: " + result[0]);
         System.out.println("The ending index of the maximum subarray is: " + result[1]);
@@ -36,6 +39,8 @@ public class MaximumSubArray {
                 maxRight = j;
             }
         }
+        
+        // return (low, high, sum)
         return new int[]{maxLeft, maxRight, leftSum + rightSum};
     }
 
@@ -48,6 +53,9 @@ public class MaximumSubArray {
             int[] left = findMaxSubArray(arr, low, mid);
             int[] right = findMaxSubArray(arr, mid + 1, high);
             int[] cross = findMaxCrossingSubArray(arr, low, mid, high);
+
+            System.out.print("Cross: ");
+            display(cross);
 
             if (left[2] >= right[2] && left[2] >= cross[2]) {
                 return left;
